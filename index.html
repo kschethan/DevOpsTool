@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="main.css"/>
+    <script src="jquery-1.9.1.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<table width="1200" border="1px solid black">
+
+    <tr>
+        <td width="1150">
+            <input style="width:98%;" type="text" />
+        </td>
+
+        <td width="50">
+            <input class="get" type="button" value="Send" onclick="getResults();"/>
+        </td>
+    </tr>
+</table>
+<table width="1200" border="1px solid black">
+    <tr>
+
+        <td width="400">
+            <input id="ip_address" type="text" style="width: 300px;padding: 4px;font-size: 18px;" placeholder="IP address of the Device"/>
+        </td>
+
+        <td width="480" class="projection">
+            <input type="checkbox" name="checkbox" id="checkbox_id" value="_id">
+            <label for="checkbox_id">ID</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_title" value="title">
+            <label for="checkbox_title">Title</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_intent" value="intent">
+            <label for="checkbox_intent">Intent</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_container" value="container">
+            <label for="checkbox_container">Container</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_screen" value="screen">
+            <label for="checkbox_screen">Screen</label><br>
+
+            <input type="checkbox" name="checkbox" id="checkbox_cellx" value="cellx">
+            <label for="checkbox_cellx">CellX</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_celly" value="celly">
+            <label for="checkbox_celly">CellY</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_spanx" value="spanx">
+            <label for="checkbox_spanx">SpanX</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_spany" value="spany">
+            <label for="checkbox_spany">SpanY</label><br>
+
+            <input type="checkbox" name="checkbox" id="checkbox_item_type" value="item_type">
+            <label for="checkbox_item_type">Item Type</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_appWidgetId" value="appWidgetId">
+            <label for="checkbox_appWidgetId">App Widget ID</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_iconType" value="iconType">
+            <label for="checkbox_iconType">Icon Type</label><br>
+
+            <input type="checkbox" name="checkbox" id="checkbox_iconPackage" value="iconPackage">
+            <label for="checkbox_iconPackage">Icon Package</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_iconResource" value="iconResource">
+            <label for="checkbox_iconResource">Icon Resource</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_uri" value="uri">
+            <label for="checkbox_uri">Uri</label><br>
+
+            <input type="checkbox" name="checkbox" id="checkbox_displayMode" value="displayMode">
+            <label for="checkbox_displayMode">Display Mode</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_appWidgetProvider" value="appWidgetProvider">
+            <label for="checkbox_appWidgetProvider">App Widget Provider</label><br>
+
+            <input type="checkbox" name="checkbox" id="checkbox_modified" value="modified">
+            <label for="checkbox_modified">Modified</label>
+
+            <input type="checkbox" name="checkbox" id="checkbox_restored" value="restored">
+            <label for="checkbox_restored">Restored</label>
+
+        </td>
+        <td width="400">
+            <span>Selection</span><br>
+            <div id="selection_area">
+                <table width="350">
+                    <tr>
+                        <td width="120" style="padding: 4px;">
+                            <input type="text" style="width: 120px;padding: 4px;font-size: 18px;" placeholder="Key"/>
+                        </td>
+                        <td width="120" style="padding: 4px;">
+                            <input type="text" style="width: 120px;padding: 4px;font-size: 18px;" placeholder="Value"/>
+                        </td>
+                        <td width="40">
+                            <input class="add_pair" type="button" value="Add" onclick="createNewKeyValueLayout();"/>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td width="350" style="padding: 4px;" >
+                            <input class="add_pair" type="button" value="Add" onclick="createNewKeyValueLayout();"/>
+                        </td>
+                    </tr>
+                    </tr>
+                </table>
+            </div>
+        </td>
+
+    </tr>
+
+
+
+    <!--<tr>-->
+        <!--<th>_id</th>-->
+        <!--<th>title</th>-->
+        <!--<th>intent</th>-->
+        <!--<th>container</th>-->
+        <!--<th>screen</th>-->
+        <!--<th>cellX</th>-->
+        <!--<th>cellY</th>-->
+        <!--<th>spanX</th>-->
+        <!--<th>spanY</th>-->
+        <!--<th>itemType</th>-->
+        <!--<th>appWidgetId</th>-->
+        <!--<th>iconType</th>-->
+        <!--<th>iconPackage</th>-->
+        <!--<th>iconResource</th>-->
+        <!--<th>URI</th>-->
+        <!--<th>displayMode</th>-->
+        <!--<th>appWidgetProvider</th>-->
+        <!--<th>modified</th>-->
+        <!--<th>spanY</th>-->
+        <!--<th>RESTORED</th>-->
+    <!--</tr>-->
+
+    <!--<tr>-->
+        <!--<td>_id</td>-->
+        <!--<td>title</td>-->
+        <!--<td>intent</td>-->
+        <!--<td>container</td>-->
+        <!--<td>screen</td>-->
+        <!--<td>cellX</td>-->
+        <!--<td>cellY</td>-->
+        <!--<td>spanX</td>-->
+        <!--<td>spanY</td>-->
+        <!--<td>itemType</td>-->
+        <!--<td>appWidgetId</td>-->
+        <!--<td>iconType</td>-->
+        <!--<td>iconPackage</td>-->
+        <!--<td>iconResource</td>-->
+        <!--<td>URI</td>-->
+        <!--<td>displayMode</td>-->
+        <!--<td>appWidgetProvider</td>-->
+        <!--<td>modified</td>-->
+        <!--<td>spanY</td>-->
+        <!--<td>RESTORED</td>-->
+    <!--</tr>-->
+</table>
+
+<table>
+
+</table>
+
+</body>
+</html>
